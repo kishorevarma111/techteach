@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
   <head>
 
     <meta charset="utf-8">
@@ -17,6 +17,7 @@
     <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
+
 
   <body>
 
@@ -37,7 +38,34 @@
    <li class="breadcrumb-item active">profile</li>
  </ol>
 
-
+ <img style="width: 80%;" src="<?php echo $_SESSION['picture'] ?>">
+   </div>
+   <div class="col-md-9">
+			<table class="table table-hover table-bordered">
+				<tbody>
+					<tr>
+						<td>ID</td>
+						<td><?php echo $_SESSION['id'] ?></td>
+					</tr>
+					<tr>
+						<td>First Name</td>
+						<td><?php echo $_SESSION['givenName'] ?></td>
+					</tr>
+					<tr>
+						<td>Last Name</td>
+						<td><?php echo $_SESSION['familyName'] ?></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><?php echo $_SESSION['email'] ?></td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td><?php echo $_SESSION['gender'] ?></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 
 

@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<?php
+    require_once "config.php";
+
+	if (isset($_SESSION['access_token'])) {
+		header('Location: profile.php');
+		exit();
+	}
+
+	$loginURL = $gClient->createAuthUrl();
+?>
 <html lang="en">
 
   <head>
@@ -36,6 +46,22 @@
         </li>
         <li class="breadcrumb-item active">SignIn</li>
       </ol>
+      <div class="container" >
+      <div class="row justify-content-center">
+          <div class="col-md-6 col-offset-3" align="center">
+
+              <img src="images/icon.png"><br><br>
+
+              <form >
+                  <input placeholder="Email..." name="email" class="form-control"><br>
+                  <input type="password" placeholder="Password..." name="password" class="form-control"><br>
+                  <input type="submit" value="Log In" class="btn btn-primary">
+                  <input type="button" onclick="window.location = '<?php echo $loginURL ?>';" value="Log In With Google" class="btn btn-danger">
+              </form>
+
+          </div>
+      </div>
+  </div>
 
 
 

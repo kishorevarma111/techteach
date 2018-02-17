@@ -17,6 +17,15 @@
     <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
+<!-- logout code-->
+<?php
+	require_once "config.php";
+	session_unset($_SESSION['access_token']);
+	$gClient->revokeToken();
+	session_destroy();
+	header('Location: signin.php');
+	exit();
+?>
 
   <body>
 

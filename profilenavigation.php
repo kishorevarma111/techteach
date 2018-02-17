@@ -1,3 +1,11 @@
+<?php
+	session_start();
+
+	if (!isset($_SESSION['access_token'])) {
+		header('Location: signin.php');
+		exit();
+	}
+?>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.php">TECH TEACH</a>
@@ -21,8 +29,8 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span id="username">name of the user</span>
-            <img src="images/profileicon.png">
+            <span id="username"><?php echo $_SESSION['givenName'].$_SESSION['familyName']?></span>
+            <img class="img-responsive" src="<?php echo $_SESSION['picture']?>">
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
             <a class="dropdown-item" href="profile.php">profile</a>
