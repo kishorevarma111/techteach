@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
   <head>
 
     <meta charset="utf-8">
@@ -37,35 +37,29 @@
    </li>
    <li class="breadcrumb-item active">profile</li>
  </ol>
+ <div class="row">
+   <div class="col-lg-6">
+     <h2><?php echo $_SESSION['givenName'].$_SESSION['familyName'] ?></h2>
 
- <img style="width: 80%;" src="<?php echo $_SESSION['picture'] ?>">
+     <ul>
+       <li>
+         <strong><?php echo $_SESSION['id'] ?></strong>
+       </li>
+       <li><?php echo $_SESSION['givenName']," ".$_SESSION['familyName'] ?></li>
+       <li><strong><?php echo $_SESSION['email'] ?></strong></li>
+      
+
+     </ul>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
    </div>
-   <div class="col-md-9">
-			<table class="table table-hover table-bordered">
-				<tbody>
-					<tr>
-						<td>ID</td>
-						<td><?php echo $_SESSION['id'] ?></td>
-					</tr>
-					<tr>
-						<td>First Name</td>
-						<td><?php echo $_SESSION['givenName'] ?></td>
-					</tr>
-					<tr>
-						<td>Last Name</td>
-						<td><?php echo $_SESSION['familyName'] ?></td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td><?php echo $_SESSION['email'] ?></td>
-					</tr>
-					<tr>
-						<td>Gender</td>
-						<td><?php echo $_SESSION['gender'] ?></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+   <div class="col-lg-6">
+  <img class="image-responsive image-circle"  src="<?php echo $_SESSION['picture'] ?>"><br>
+  <button class="btn-success" name="changepic">Change Profile picture</button>
+   </div>
+
+ </div>
+
+
 
 
 
