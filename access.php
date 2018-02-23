@@ -26,14 +26,14 @@
   $familyName=$_SESSION['familyName'];
   $email=$_SESSION['email'];
   $gender=$_SESSION['gender'];
-
+/*
 $rset=mysqli_query($conn,"INSERT INTO users(uid,givenName,familyName,email)
 values('$uid','$givenName','$familyName','$email')");
 if(!$rset){
 	die("COULD NOT INSERT!");
 
 }
-
+*/
 
 
   header('Location: profile.php');

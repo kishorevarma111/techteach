@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "techteach";
 //queries
-
+/*
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
@@ -14,6 +14,7 @@ if (!$conn) {
   echo "success";
 }
 
+*/
 
 
 
